@@ -15,7 +15,7 @@ while ($row = $result->fetch_assoc()) {
 }
 ?>
 
-<form method='GET' actoin="data.php">
+<form method='POST' actoin="add.php">
     name : <input name='name' />
     age : <input name='age' />
     <input type='submit' />
