@@ -8,9 +8,9 @@ else{
     echo "資料庫連線成功!!"."<br>";
 }
 
-$result = $conn->query("SELECT * FROM `users`;");
+$result = $conn->query("SELECT * FROM `users` ORDER BY id ASC;");
 while ($row = $result->fetch_assoc()) {
-    echo "id : ".$row['id']."<br>";
+    echo "id : ".$row['id']." "."<a href='delete.php?id=".$row['id']."'>delete</a>"."<br>";
     echo "username : ".$row['username']."<br>";
 }
 ?>
